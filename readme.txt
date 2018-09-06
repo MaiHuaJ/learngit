@@ -67,3 +67,21 @@ git push origin master
 从远程库克隆：
 git clone git@github.com:MaiHuaJ/gitskills.git
 
+创建分支与合并分支
+先创建分支：
+git checkout -b dev //加上- b 参数表示创建并切换，相当于以下两条
+命令
+git branch dev
+git checkout dev
+用 git branch 查看当前分支
+然后就可以在dev分支上正常提交：
+git add readme.txt
+git commit -m "branch test"
+dev分支完成后，切换回master分支
+git checkout master
+合并dev分支
+git marge dev
+删除dev分支
+git branch -d dev
+
+
