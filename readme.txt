@@ -40,7 +40,17 @@ HEAD指向的版本就是当前的版本，因此，git允许我们在版本的�
 要重返未来，用git reflog 命令查看历史，以便确定要回到未来的哪个版本。
 git reset --hard HEAD^ //返回上一个版本  上上版本HEAD^^  100以上用HEAD~100
 
-撤销修改
+没进暂存区撤销修改
 git chechout -- readme.txt
+git add <file> 存进了暂存区
+想修改git reset HEAD <filename> --> git chechout -- <filename>
+提交了（git commit -m “备注说明修改了什么”），只能版本回退。
+
+rm text.txt //删除文件text.txt
+确定删除：git rm text.txt
+          git commit -m "remove texxt.txt" //从版本库删除了文件
+
+或还原：git checkout -- test.txt
+
 
 
