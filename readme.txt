@@ -52,5 +52,18 @@ rm text.txt //删除文件text.txt
 
 或还原：git checkout -- test.txt
 
-
+远程仓库  登陆GitHub，New repository-->Repository name(learngit)-->create repository //创建了learngit仓库
+把本地仓库的内容推送到GitHub仓库：
+git remote add origin git@github.com:MaiHuaJ/learngit.git
+MaiHuaJ是我的GitHub账号名
+查看自己的key
+cat ~/.ssh/idrsa.pub
+复制好key，上传key：
+Edit profile--> SSH and GPG keys-->New SSH key-->粘贴进key-->Add SSh key
+在git Base使用命令ssh -T git@github.com测试公钥是否添加成功。
+git push -u origin master //把本地库的所有文件推送到远程库上。
+从现在起，只要本地做了提交，就可以通过命令：
+git push origin master
+从远程库克隆：
+git clone git@github.com:MaiHuaJ/gitskills.git
 
